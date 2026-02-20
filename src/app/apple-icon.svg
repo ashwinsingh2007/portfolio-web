@@ -1,0 +1,24 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="50%" style="stop-color:#22d3ee"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f"/>
+      <stop offset="100%" style="stop-color:#111118"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="180" height="180" rx="40" fill="url(#bg)"/>
+
+  <!-- Clean AK monogram -->
+  <g fill="url(#grad)">
+    <!-- A -->
+    <path d="M38 135L67.5 45H81.5L111 135H94L88 117H61L55 135H38ZM65.5 103H83.5L74.5 69L65.5 103Z"/>
+    <!-- K -->
+    <path d="M117 45H134V83L162 45H183L148 90L185 135H162L134 97V135H117V45Z"/>
+  </g>
+</svg>
