@@ -127,3 +127,237 @@ body {
 .chat-bounce {
   animation: chat-bounce 2s ease-in-out infinite;
 }
+
+/* Code block styling */
+pre {
+  background: linear-gradient(135deg, rgba(17, 17, 24, 0.9), rgba(30, 30, 45, 0.8)) !important;
+  border: 1px solid rgba(99, 102, 241, 0.2) !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  overflow-x: auto;
+  position: relative;
+  margin: 1.5rem 0 !important;
+}
+
+pre::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #22d3ee, #a855f7);
+  border-radius: 12px 12px 0 0;
+}
+
+pre code {
+  background: transparent !important;
+  padding: 0 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.7 !important;
+  font-family: var(--font-mono), 'Fira Code', 'JetBrains Mono', monospace !important;
+}
+
+/* Inline code */
+:not(pre) > code {
+  background: rgba(99, 102, 241, 0.15) !important;
+  color: #22d3ee !important;
+  padding: 0.2em 0.4em !important;
+  border-radius: 6px !important;
+  font-size: 0.875em !important;
+  font-weight: 500;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+/* Syntax highlighting overrides for dark theme */
+.hljs {
+  background: transparent !important;
+  color: #e4e4e7 !important;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in {
+  color: #c084fc !important;
+}
+
+.hljs-string,
+.hljs-attr {
+  color: #86efac !important;
+}
+
+.hljs-number,
+.hljs-literal {
+  color: #fbbf24 !important;
+}
+
+.hljs-comment {
+  color: #6b7280 !important;
+  font-style: italic;
+}
+
+.hljs-function,
+.hljs-title {
+  color: #60a5fa !important;
+}
+
+.hljs-variable,
+.hljs-params {
+  color: #f472b6 !important;
+}
+
+.hljs-type,
+.hljs-class {
+  color: #22d3ee !important;
+}
+
+/* Blockquote styling */
+blockquote {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(34, 211, 238, 0.05)) !important;
+  border-left: 4px solid #6366f1 !important;
+  border-radius: 0 12px 12px 0 !important;
+  padding: 1rem 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  font-style: italic;
+}
+
+blockquote p {
+  color: #d1d5db !important;
+}
+
+/* List styling in blog posts */
+.prose ul {
+  list-style-type: none !important;
+  padding-left: 0 !important;
+}
+
+.prose ul li {
+  position: relative;
+  padding-left: 1.75rem !important;
+  margin-bottom: 0.5rem;
+}
+
+.prose ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #6366f1;
+  font-weight: bold;
+}
+
+.prose ol {
+  counter-reset: item;
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.prose ol li {
+  counter-increment: item;
+  position: relative;
+  padding-left: 2.5rem !important;
+  margin-bottom: 0.75rem;
+}
+
+.prose ol li::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* Headings in blog posts */
+.prose h2 {
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin-top: 3rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.prose h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #22d3ee);
+  border-radius: 2px;
+}
+
+.prose h3 {
+  color: #a5b4fc !important;
+  margin-top: 2rem !important;
+}
+
+/* Links in blog posts */
+.prose a {
+  color: #818cf8 !important;
+  text-decoration: none !important;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.prose a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #22d3ee);
+  transition: width 0.3s ease;
+}
+
+.prose a:hover::after {
+  width: 100%;
+}
+
+.prose a:hover {
+  color: #22d3ee !important;
+}
+
+/* Horizontal rule */
+.prose hr {
+  border: none !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, transparent, #6366f1, #22d3ee, #6366f1, transparent) !important;
+  margin: 3rem 0 !important;
+}
+
+/* Tables */
+.prose table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  width: 100% !important;
+  margin: 1.5rem 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(99, 102, 241, 0.2) !important;
+}
+
+.prose th {
+  background: rgba(99, 102, 241, 0.2) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 1rem !important;
+  text-align: left !important;
+}
+
+.prose td {
+  padding: 0.75rem 1rem !important;
+  border-top: 1px solid rgba(99, 102, 241, 0.1) !important;
+}
+
+.prose tr:hover td {
+  background: rgba(99, 102, 241, 0.05) !important;
+}
